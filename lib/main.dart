@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+//constant : 수정할 수 없고, compile 전에 value를 알 수 있는 변수
+// constant 변수로 만들면 런타임 전에 컴파일러가 컴파일 하는 중에 값을 산정할 수 있어서 앱이 동작하기에 더 쉬움
+
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 //StatelessWidget : Basic App 으로 화면에 뭔가를 보여주는 것 말고는 특별한 기능이 없음
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     // MaterialApp : Google <- flutter Google, 따라서 훨씬 나음
@@ -16,13 +21,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       // scaffold : 화면의 구조 제공. 모든 스크린은 scaffold가 필요하다.
       home: Scaffold(
-          backgroundColor: Color(0xFF181818),
+          backgroundColor: const Color(0xFF181818),
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 Row(
@@ -31,7 +36,7 @@ class App extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
+                        const Text(
                           'Hey, Selena',
                           style: TextStyle(
                             color: Colors.white,
@@ -50,7 +55,7 @@ class App extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 120,
                 ),
                 Text(
@@ -60,10 +65,10 @@ class App extends StatelessWidget {
                     color: Colors.white.withOpacity(0.8),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Text(
+                const Text(
                   '\$5 195 482',
                   style: TextStyle(
                     fontSize: 44,
@@ -71,7 +76,7 @@ class App extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -81,15 +86,17 @@ class App extends StatelessWidget {
                         color: Colors.amber,
                         borderRadius: BorderRadius.circular(45),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.symmetric(
                           vertical: 20,
                           horizontal: 50,
                         ),
-                        child: Text('Transfer',
-                        style: TextStyle(
-                          fontSize: 22,
-                        ),),
+                        child: Text(
+                          'Transfer',
+                          style: TextStyle(
+                            fontSize: 22,
+                          ),
+                        ),
                       ),
                     ),
                   ],
