@@ -80,27 +80,27 @@ class App extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Button(
                         text: 'Transfer',
-                        bgColor: const Color(0xFFF1B33B),
+                        bgColor: Color(0xFFF1B33B),
                         textColor: Colors.black),
                     Button(
                         text: 'Request',
-                        bgColor: const Color(0xFF1F2123),
+                        bgColor: Color(0xFF1F2123),
                         textColor: Colors.white),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Wallets',
                       style: TextStyle(
                         color: Colors.white,
@@ -117,13 +117,13 @@ class App extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    color: Color(0xFF1F2123),
+                    color: const Color(0xFF1F2123),
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: Padding(
@@ -134,7 +134,7 @@ class App extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Euro',
                               style: TextStyle(
                                 color: Colors.white,
@@ -142,19 +142,19 @@ class App extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
                               children: [
-                                Text(
+                                const Text(
                                   '6 428',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Text(
@@ -171,8 +171,8 @@ class App extends StatelessWidget {
                         Transform.scale(
                           scale: 2.2,
                           child: Transform.translate(
-                            offset: Offset(-5, 12),
-                            child: Icon(
+                            offset: const Offset(-5, 12),
+                            child: const Icon(
                               Icons.euro_rounded,
                               color: Colors.white,
                               size: 88,
