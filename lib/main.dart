@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/button.dart';
 
 //constant : 수정할 수 없고, compile 전에 value를 알 수 있는 변수
 // constant 변수로 만들면 런타임 전에 컴파일러가 컴파일 하는 중에 값을 산정할 수 있어서 앱이 동작하기에 더 쉬움
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
       home: Scaffold(
           backgroundColor: const Color(0xFF181818),
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -80,25 +81,16 @@ class App extends StatelessWidget {
                   height: 30,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            fontSize: 22,
-                          ),
-                        ),
-                      ),
-                    ),
+                    Button(
+                        text: 'Transfer',
+                        bgColor: const Color(0xFFF1B33B),
+                        textColor: Colors.black),
+                    Button(
+                        text: 'Request',
+                        bgColor: const Color(0xFF1F2123),
+                        textColor: Colors.white),
                   ],
                 ),
               ],
